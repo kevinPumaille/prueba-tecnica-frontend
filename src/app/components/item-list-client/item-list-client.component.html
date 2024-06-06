@@ -1,0 +1,19 @@
+<li class="text-bgDetailPrimary">
+    <a (click)="selectClient(client())" class="grid grid-cols-2 shadow-custom rounded-3xl p-2 mb-4 bg-white cursor-pointer">
+        <section class="flex">
+            <div class="w-16 h-16 rounded-full truncate">
+                <img src="./assets/person_item_img.png" alt="">
+            </div>
+        
+            <section class="flex flex-col justify-center ml-4">
+                <h4 class="text-xl font-bold">{{client()?.first_name}}</h4>
+                <p class="text-xs">{{client()?.last_name}}</p>
+            </section>
+        </section>
+        <section class="flex gap-4 justify-end items-center pr-4">
+            <i class="pi pi-bell" style="font-size: 1rem"></i>
+            <i class="pi pi-heart" style="font-size: 1rem"></i>
+            <span>online<i class="pi pi-circle-on ml-1 text-yellow" style="font-size: .5rem"></i></span>
+        </section>
+    </a>
+</li>

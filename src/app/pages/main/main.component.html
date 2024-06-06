@@ -1,0 +1,78 @@
+<main class="grid grid-cols-1 gap-8 md:grid-cols-2 min-h-screen bg-bgMain ">
+
+    <!-- En esta seccion se visualiza los detalles del cliente -->
+    <section class="flex justify-center pt-16 bg-bgDetailPrimary md:rounded-tr-[40px] md:rounded-br-[40px]">
+        <app-detail-client [client]="selectedClient"/>
+    </section>
+
+    <!-- En esta seccion se listan los clientes -->
+    <section class="pt-0 md:pt-8">
+
+        <div class="grid grid-cols-2 items-center pr-8 mb-2">
+            <h2 class="text-3xl font-bold pl-4">Clients</h2>
+            <div class="flex justify-end">
+                <!-- Boton para agregar un cliente -->
+                <button (click)="showDialogAdd()" class="flex items-center hover:bg-hoverBtnAgregar rounded-full p-1 transition duration-300">
+                    <i class="pi pi-plus mr-1 " style="font-size: 1rem"></i>
+                    <span>Add</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="max-h-[40rem] overflow-auto pr-4">
+            <ul class="">
+                @if(listClient.length > 0){
+                    @for(client of listClient; track $index){
+                        <app-item-list-client [client]="client" (clientSelected)="onClientSelected($event)"/>
+                    }
+                }@else {
+                    <p class="text-center mt-8">Not Clients</p>
+                }
+            </ul>
+        </div>
+    </section>
+</main>
+
+<!-- Modal para agregar un cliente -->
+<p-dialog [modal]="true" [(visible)]="dialogAddVisible" [style]="{ width: '25rem' }" [draggable]="false">
+
+    <ng-template pTemplate="header">
+        <section class="relative w-full text-end pr-8">
+            <div class="">
+                <img src="./assets/person2_img.png" alt="person2" class="absolute top-[-127px] w-28">
+            </div>
+            <span class="w-full font-semibold text-xl">Add Client</span>
+        </section>
+    </ng-template>
+    
+        <ng-template pTemplate="content">
+            <form [formGroup]="formAddClient" (ngSubmit)="formAddSubmit()">
+            <span class="p-text-secondary block mb-5">Add your information here.</span>
+
+            <div class="flex align-items-center gap-3 mb-3">
+                <label for="first_name" class="font-semibold w-6rem">First name</label>
+                <input formControlName="first_name" type="text" name="first_name"
+                    class="flex-auto rounded-md bg-bgInput px-2 py-1" />
+            </div>
+            <div class="flex align-items-center gap-3 mb-5">
+                <label for="last_name" class="font-semibold w-6rem">Last Name</label>
+                <input formControlName="last_name" type="text" name="last_name"
+                    class="flex-auto rounded-md bg-bgInput px-2 py-1" />
+            </div>
+            <div class="flex align-items-center gap-3 mb-5">
+                <label for="address" class="font-semibold w-6rem">Address</label>
+                <input formControlName="address" type="text" name="address" class="flex-auto rounded-md bg-bgInput px-2 py-1" />
+            </div>
+            <div class="flex align-items-center gap-3 mb-5">
+                <label for="phone_number" class="font-semibold w-6rem">Phone Number</label>
+                <input formControlName="phone_number" type="text" name="phone_number"
+                    class="flex-auto rounded-md bg-bgInput px-2 py-1" />
+            </div>
+            <span class="text-xs">{{messageWarnin}}</span>
+            <div class="flex justify-end gap-2">
+                <button type="submit" class="bg-bgDetailPrimary text-colorLight py-2 px-4 rounded-xl">Save</button>
+            </div>
+        </form>
+        </ng-template>
+
+</p-dialog>

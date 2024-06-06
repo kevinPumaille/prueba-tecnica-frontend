@@ -1,27 +1,47 @@
 # PruebaTecnica
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+Este repositorio contiene el proyecto CRUD desarrollado como parte de una prueba técnica para un puesto de desarrollador. El proyecto fue realizado utilizando Angular version 17.3.6, Tailwind CSS y PrimeNG.
 
-## Development server
+## Descripción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+El objetivo de este proyecto es demostrar habilidades en el desarrollo de aplicaciones web mediante la implementación de un CRUD (Crear, Leer, Actualizar, Eliminar). La aplicación permite gestionar una lista de elementos, proporcionando una interfaz de usuario intuitiva y funcional.Además, se utilizó Postman Mock Server para simular las respuestas de la API durante el desarrollo.
 
-## Code scaffolding
+## Tecnologías Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular**: Framework de desarrollo web utilizado para construir la aplicación.
+- **Tailwind CSS**: Framework de CSS para diseñar la interfaz de usuario de manera eficiente y responsiva.
+- **PrimeNG**: Biblioteca de componentes UI para Angular, utilizada para mejorar la experiencia del usuario con componentes predefinidos.
 
-## Build
+## Instalación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clonar el repositorio:
+    ```bash
+    git clone https://github.com/kevinPumaille/prueba-tecnica-frontend.git
+    ```
+2. Navegar al directorio del proyecto:
+    ```bash
+    cd prueba-tecnica-frontend
+    ```
+3. Instalar las dependencias:
+    ```bash
+    npm install
+    ```
 
-## Running unit tests
+## Uso
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Iniciar la aplicación:
+    ```bash
+    ng serve
+    ```
+2. Abrir el navegador y navegar a `http://localhost:4200/`.
 
-## Running end-to-end tests
+## Funcionalidades
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Crear**: Agregar nuevos elementos a la lista.
+- **Leer**: Visualizar la lista de elementos existentes.
+- **Actualizar**: Editar la información de los elementos existentes.
+- **Eliminar**: Remover elementos de la lista.
 
-## Further help
+## Final
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+¡Gracias por visitar el repositorio!
