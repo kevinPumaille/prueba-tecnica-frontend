@@ -1,6 +1,6 @@
 # PruebaTecnica
 
-Este repositorio contiene el proyecto CRUD desarrollado como parte de una prueba técnica para un puesto de desarrollador. El proyecto fue realizado utilizando Angular version 17.3.6, Tailwind CSS y PrimeNG.
+Este repositorio contiene el proyecto CRUD desarrollado como parte de una prueba técnica para un puesto de desarrollador. El proyecto fue realizado utilizando Angular version 17.3.6,Node 20, Tailwind CSS y PrimeNG.
 
 ## Descripción
 
